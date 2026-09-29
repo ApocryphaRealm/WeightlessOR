@@ -4,7 +4,7 @@ An OBSE64 plugin for The Elder Scrolls IV: Oblivion Remastered: items weigh noth
 on an in-game page of the Apocrypha Menu Framework. A clean rebuild - Skyrim's Weightless NG (VersuchDrei) is the
 reference for what it does, not for how.
 
-Unreleased: built, not yet tried in game.
+**Version 1.0.0.**
 
 ## What it does
 
