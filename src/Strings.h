@@ -1,0 +1,17 @@
+#pragma once
+
+// Every visible string goes through TR() with a WL_-prefixed key and its English (rule 66). The eleven files
+// are UTF-16LE with a BOM, "$WL_<Key><TAB>text" per line, and ship in the FRAMEWORK's translation folder -
+// OBSE\Plugins\ApocryphaMenuFramework\Translations\Weightless_<language>.txt - because AMF builds its font atlas from
+// every <Mod>_<language>.txt there, so a Japanese or Chinese page gets its glyphs. The language is AMF::Language(),
+// re-read each frame the page draws. (Taken from Ultimate Combat Redux's plugin.)
+
+namespace strings
+{
+	void Refresh();   // cheap; reloads only when AMF's language changed
+	const char* Get(const char* a_key, const char* a_english);   // pointer stays valid until the next reload
+	const std::string& Language();
+	std::size_t Count();
+}
+
+#define TR(key, english) ::strings::Get(key, english)
