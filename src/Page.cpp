@@ -135,9 +135,9 @@ namespace page
 			return;
 		}
 		if (AMF::RegisterPage(kModName, "Settings", &Draw)) {
-			logger::info("AMF {}: the Weightless settings page is registered", AMF::Version());
+			logger::info("AMF {}: the Weightless Menu settings page is registered", AMF::Version());
 		} else {
-			logger::warn("AMF refused the Weightless page");
+			logger::warn("AMF refused the Weightless Menu page");
 		}
 	}
 }

@@ -1,6 +1,6 @@
-Weightless for Oblivion
-=======================
-Version 1.0.0
+Weightless Menu
+===============
+Version 1.0.1
 
 An original, GPL-3.0-or-later OBSE64 plugin for The Elder Scrolls IV: Oblivion Remastered. Items weigh
 nothing in your inventory, by category, and you choose the categories on an in-game settings page of
@@ -19,7 +19,7 @@ too. Out of the box everything is weightless except Clothing, Armour and Weapons
 
 USING IT
 --------
-  * Open the Apocrypha Menu Framework (F1), then Weightless. Each switch shows how many items it
+  * Open the Apocrypha Menu Framework (F1), then Weightless Menu. Each switch shows how many items it
     covers. A change applies at once and your burden is counted again.
   * Switching a category off gives every item back its own weight, exactly.
   * The same switches are in Weightless.ini, if you prefer to edit a file.

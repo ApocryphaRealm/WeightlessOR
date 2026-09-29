@@ -3,6 +3,11 @@
 Written as changes happen, not reconstructed afterwards (rule 61). A version number is issued by the version gate
 only once a build is seen working in game (rule 48); until then the work sits under Unreleased.
 
+## 1.0.1 - 2026-09-29 - untested
+
+### Changed
+- named Weightless Menu (the owner, 2026-09-29: "just call it weightless menu and update it for that"): the entry in the Apocrypha Menu Framework's mod list, the package and the page. The DLL, its INI, log and translation files keep the name Weightless, so settings carry over.
+
 ## 1.0.0 - 2026-09-29 - working
 
 ### Added

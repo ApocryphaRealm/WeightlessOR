@@ -1,4 +1,4 @@
-# Weightless for Oblivion - copyright and licence
+# Weightless Menu - copyright and licence
 
 Copyright (C) 2026 ApocryphaRealm
 

@@ -1,10 +1,10 @@
-# Weightless for Oblivion
+# Weightless Menu
 
 An OBSE64 plugin for The Elder Scrolls IV: Oblivion Remastered: items weigh nothing in your inventory, by category, set
 on an in-game page of the Apocrypha Menu Framework. A clean rebuild - Skyrim's Weightless NG (VersuchDrei) is the
 reference for what it does, not for how.
 
-**Version 1.0.0.**
+**Version 1.0.1.**
 
 ## What it does
 

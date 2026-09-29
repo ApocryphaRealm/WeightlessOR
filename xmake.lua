@@ -1,4 +1,4 @@
--- Weightless for The Elder Scrolls IV: Oblivion Remastered (OBSE64 plugin): items weigh nothing by category, with a
+-- Weightless Menu for The Elder Scrolls IV: Oblivion Remastered (OBSE64 plugin): items weigh nothing by category, with a
 -- settings page on the Apocrypha Menu Framework (the owner, 2026-09-29; plan: 4. plans/weightless-oblivion/PLAN.md).
 -- rule 45: no build-machine paths in any compiled object - set BEFORE includes() so CommonLibOB64's own library
 -- target gets it too. /d1trimfile is wrapped in a TABLE so xmake passes it as one argument (logic library 7598); no
@@ -9,7 +9,7 @@ add_shflags("/PDBALTPATH:%_PDB%", {force = true})
 includes("lib/commonlibob64")
 
 set_project("Weightless")
-set_version("1.0.0")
+set_version("1.0.1")
 set_license("GPL-3.0-or-later")
 set_languages("c++23")
 set_warnings("allextra")
@@ -32,7 +32,7 @@ target("Weightless")
     add_rules("commonlibob64.plugin", {
         name = "Weightless",
         author = "ApocryphaRealm",
-        description = "Weightless - items weigh nothing by category, set on an Apocrypha Menu Framework page (Oblivion Remastered)"
+        description = "Weightless Menu - items weigh nothing by category, set on an Apocrypha Menu Framework page (Oblivion Remastered)"
     })
     add_deps("imgui")
     add_packages("nlohmann_json")
