@@ -3,6 +3,13 @@
 Written as changes happen, not reconstructed afterwards (rule 61). A version number is issued by the version gate
 only once a build is seen working in game (rule 48); until then the work sits under Unreleased.
 
+## Unreleased - 2026-10-01 - untested (built, not run)
+
+### Fixed
+- The page's switches show their track again: drawn in the framework's own fixed colours (red off, green on, a white
+  knob - Apocrypha Menu Framework's ToggleSwitch.h, as Camera Configuration Menu draws them). AMF's theme leaves the
+  Button and FrameBg colours clear, so the theme-coloured track was invisible and only the knob showed.
+
 ## 1.0.1 - 2026-09-29 - working
 
 ### Changed

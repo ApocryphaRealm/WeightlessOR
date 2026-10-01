@@ -55,21 +55,25 @@ namespace page
 			return groups;
 		}
 
-		// An on/off switch (rule 32 - never a checkbox), in the theme's colours; a normal navigable item.
+		// An on/off switch (rule 32 - never a checkbox): the framework's own design (ApocryphaMenuFrameworkOR
+		// include/utils/ToggleSwitch.h, as Camera Configuration Menu draws it) - a red/green track and a white knob in fixed
+		// colours. The theme's colours showed only the knob: AMF's theme leaves Button and FrameBg clear (to-do list,
+		// Weightless Menu 1.0.2 follow-ups). A normal navigable item for the controller.
 		bool Switch(const char* a_label, bool* a_v)
 		{
 			ImGui::PushID(a_label);
 			const float h = ImGui::GetFrameHeight();
-			const float w = h * 1.8f;
+			const float w = h * 2.0f;
+			const float rr = h * 0.5f;
 			const ImVec2 p = ImGui::GetCursorScreenPos();
 			const bool pressed = ImGui::InvisibleButton("##switch", ImVec2(w, h));
 			if (pressed) *a_v = !*a_v;
 			const bool hot = ImGui::IsItemHovered() || ImGui::IsItemFocused();
 			auto* dl = ImGui::GetWindowDrawList();
-			dl->AddRectFilled(p, ImVec2(p.x + w, p.y + h),
-				ImGui::GetColorU32(*a_v ? (hot ? ImGuiCol_ButtonHovered : ImGuiCol_Button) : (hot ? ImGuiCol_FrameBgHovered : ImGuiCol_FrameBg)), h * 0.5f);
-			const float r = h * 0.5f - 2.0f;
-			dl->AddCircleFilled(ImVec2(*a_v ? p.x + w - r - 2.0f : p.x + r + 2.0f, p.y + h * 0.5f), r, ImGui::GetColorU32(*a_v ? ImGuiCol_Text : ImGuiCol_TextDisabled));
+			const ImU32 track = *a_v ? (hot ? IM_COL32(92, 191, 96, 255) : IM_COL32(76, 175, 80, 255))
+			                         : (hot ? IM_COL32(207, 84, 84, 255) : IM_COL32(191, 68, 68, 255));
+			dl->AddRectFilled(p, ImVec2(p.x + w, p.y + h), track, rr);
+			dl->AddCircleFilled(ImVec2(p.x + rr + (*a_v ? w - h : 0.0f), p.y + rr), rr - 2.0f, IM_COL32(240, 240, 240, 255), 32);
 			ImGui::SameLine(0.0f, ImGui::GetStyle().ItemInnerSpacing.x);
 			ImGui::AlignTextToFramePadding();
 			ImGui::TextUnformatted(a_label);
